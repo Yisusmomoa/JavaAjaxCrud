@@ -1,0 +1,7 @@
+controller\indexController.class
+dao\escuelaDAO.class
+models\alumno.class
+dao\alumnoDAO.class
+controller\añadirAlumno.class
+models\escuela.class
+utilis\DbConnection.class

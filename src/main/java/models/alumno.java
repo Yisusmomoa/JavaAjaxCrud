@@ -24,6 +24,13 @@ public class alumno {
         this.nombreAlumno = nombreAlumno;
     }
 
+    public alumno(String nombreAlumno, int idEscuelaPertenece) {
+        this.nombreAlumno = nombreAlumno;
+        this.idEscuelaPertenece = idEscuelaPertenece;
+    }
+    
+    
+
     public int getIdAlumno() {
         return idAlumno;
     }

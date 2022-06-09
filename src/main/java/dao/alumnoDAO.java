@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import models.alumno;
 import models.escuela;
 import utilis.DbConnection;
 
@@ -20,5 +21,19 @@ import utilis.DbConnection;
  * @author bjls2
  */
 public class alumnoDAO {
-   
+   public static int añadirAlumno(alumno alumno){
+        Connection con;
+       try {
+           con = DbConnection.getConnection();
+           String sql="CALL añadirAlumno(?,?)";
+           CallableStatement statement=con.prepareCall(sql);
+           statement.setString(1, alumno.getNombreAlumno());
+           statement.setInt(2, alumno.getIdEscuelaPertenece());
+           return statement.executeUpdate();
+       } catch (SQLException ex) {
+           Logger.getLogger(alumnoDAO.class.getName()).log(Level.SEVERE, null, ex);
+       }
+        
+       return 0;
+   }
 }

@@ -82,7 +82,7 @@ List<escuela> listaEscuelas=(List<escuela>)request.getAttribute("listaEscuelas")
                         <input type="text" class="form-control" 
                                id="nombreEstudiante">
                       </div>
-                      <select class="form-select" aria-label="Default select example">
+                      <select class="form-select" id="idEscuela" aria-label="Default select example">
                           <option selected value="null">Escuela</option>
                           <%for(escuela escuelai: listaEscuelas){%>
                               <option value="<%= escuelai.getIdEscuela() %>"><%= escuelai.getNombreEscuela() %></option>
@@ -110,4 +110,6 @@ List<escuela> listaEscuelas=(List<escuela>)request.getAttribute("listaEscuelas")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="./JS/index.js"></script>
 </html>
